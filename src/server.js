@@ -14,8 +14,12 @@ const io = new Server({
     },
 });
 
-let players = [];
+/**
+ * Start listening on the specified port.
+ */
+io.listen(port);
 
+let players = [];
 
 io.on('connection', (socket)=>{
     
