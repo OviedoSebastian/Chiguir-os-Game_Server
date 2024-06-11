@@ -69,5 +69,3 @@ io.on('connection', (socket)=>{
     })
 
 });
-
-io.listen(port)
