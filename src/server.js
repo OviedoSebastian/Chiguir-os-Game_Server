@@ -59,6 +59,7 @@ io.on('connection', (socket)=>{
 
 
     socket.on('disconnect', ()=>{
+        console.log("Jugador desconectado");
         players = players.filter(player =>player.id !== socket.id);
         console.log(
             "Player disconnected with ID",
