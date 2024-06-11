@@ -36,8 +36,8 @@ io.on('connection', (socket)=>{
         players.push({
             id: socket.id,
             urlAvatar: io.engine.clientsCount === 1 ?
-            "/assets/models/avatars/Engineer.glb":
             "/assets/models/avatars/Cientific.glb",
+            "/assets/models/avatars/Engineer.glb":
             position: null,
             rotation: null,
             animation: "Idle"
