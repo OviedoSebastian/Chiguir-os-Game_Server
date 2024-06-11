@@ -6,7 +6,7 @@ const clientUrl = "http://localhost:3000"; // Servidor Local
 const clientUrlDeploy = "https://rtf-practices.vercel.app/"; // Servidor de despliegue
 
 
-const port = 8080;
+const port = 5000;
 
 const io = new Server({
     cors:{
