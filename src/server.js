@@ -30,8 +30,9 @@ io.on('connection', (socket)=>{
         " players connected"
     );
 
+    //Realiza la coneccion inicial de los jugadores
+    //Funciona
     socket.on('player-connected', ()=>{
-        console.log("Jugador conectado");
         players.push({
             id: socket.id,
             urlAvatar: io.engine.clientsCount === 1 ?
@@ -49,6 +50,7 @@ io.on('connection', (socket)=>{
         player.position = valuesTranformPlayer.position;
         player.rotation = valuesTranformPlayer.rotation;
         socket.broadcast.emit("updates-values-transform-player", player);
+        console.log(valuesTranformPlayer);
     })
 
     socket.on("change-animation", (animation) =>{
