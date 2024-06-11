@@ -31,6 +31,7 @@ io.on('connection', (socket)=>{
     );
 
     socket.on('player-connected', ()=>{
+        console.log("Jugador conectado");
         players.push({
             id: socket.id,
             urlAvatar: io.engine.clientsCount === 1 ?
