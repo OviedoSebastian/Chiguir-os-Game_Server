@@ -50,7 +50,6 @@ io.on('connection', (socket)=>{
         player.position = valuesTranformPlayer.position;
         player.rotation = valuesTranformPlayer.rotation;
         socket.broadcast.emit("updates-values-transform-player", player);
-        console.log(valuesTranformPlayer);
     })
 
     socket.on("change-animation", (animation) =>{
