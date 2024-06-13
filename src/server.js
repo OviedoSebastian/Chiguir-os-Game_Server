@@ -3,7 +3,7 @@
 const { Server } = require("socket.io");
 
 const clientUrl = "http://localhost:3000"; // Servidor Local
-const clientUrlDeploy = "https://rtf-practices.vercel.app/"; // Servidor de despliegue
+const clientUrlDeploy = "https://rtf-practices.vercel.app"; // Servidor de despliegue
 
 
 const port = 5000;
