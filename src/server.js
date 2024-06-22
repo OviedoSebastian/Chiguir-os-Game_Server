@@ -58,6 +58,12 @@ io.on('connection', (socket)=>{
         socket.broadcast.emit("update-animation", player);
     })
 
+    // Manejar la actualización de la posición del objeto
+    socket.on('updatePosition', (data) => {
+        // Emitir la nueva posición a todos los clientes excepto al remitente
+        socket.broadcast.emit('updatePosition', data);
+    });
+
 
     socket.on('disconnect', ()=>{
         console.log("Jugador desconectado");
