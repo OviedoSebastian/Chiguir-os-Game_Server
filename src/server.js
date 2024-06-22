@@ -72,6 +72,16 @@ io.on('connection', (socket)=>{
         }
     });
 
+    socket.on('update-collectables', (collectables) => {
+        players = players.map(player => {
+            if (player.id === socket.id) {
+                player.collectables = collectables;
+            }
+            return player;
+        });
+        socket.broadcast.emit('update-collectables', collectables);
+    });
+
 
     socket.on('disconnect', ()=>{
         console.log("Jugador desconectado");
