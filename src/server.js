@@ -64,19 +64,6 @@ io.on('connection', (socket)=>{
         socket.broadcast.emit('updatePosition', data);
     });
 
-    // Manejar la recolección del objeto
-    socket.on('collect-object', (objectName) => {
-        if (objects[objectName]) {
-            objects[objectName].visible = false;
-            io.emit('object-collected', objectName); // Emitir a todos los clientes que el objeto ha sido recogido
-        }
-    });
-
-    socket.on('update-collectables', (collectables) => {
-        
-        socket.broadcast.emit('update-collectables', collectables);
-    });
-
 
     socket.on('disconnect', ()=>{
         console.log("Jugador desconectado");
