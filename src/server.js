@@ -64,6 +64,10 @@ io.on('connection', (socket)=>{
         socket.broadcast.emit('updatePosition', data);
     });
 
+    socket.on('update-collectables', (collectables) => {
+        socket.broadcast.emit('update-collectables', collectables);
+    });
+
 
     socket.on('disconnect', ()=>{
         console.log("Jugador desconectado");
