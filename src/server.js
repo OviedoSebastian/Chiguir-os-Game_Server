@@ -67,6 +67,26 @@ io.on('connection', (socket)=>{
     socket.on('update-collectables', (collectables) => {
         socket.broadcast.emit('update-collectables', collectables);
     });
+    
+    socket.on('update-radio', (radio) => {
+        socket.broadcast.emit('update-radio', radio);
+    });
+
+    socket.on('update-panino', (panino) => {
+        socket.broadcast.emit('update-panino', panino);
+    });
+
+    socket.on('update-pocion', (pocion) => {
+        socket.broadcast.emit('update-pocion', pocion);
+    });
+
+    socket.on('update-curao', (curao) => {
+        socket.broadcast.emit('update-curao', curao);
+    });
+
+    socket.on('update-speedmenox', (speedmenox) => {
+        socket.broadcast.emit('update-speedmenox', speedmenox);
+    });
 
 
     socket.on('disconnect', ()=>{
